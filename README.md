@@ -23,6 +23,11 @@ We adopt this individual‐based sampling scheme to efficiency detect isolation�
 
 # 2. Population structure
 
+We investigate population structure using the admixed model of [ADMIXTURE](https://pubmed.ncbi.nlm.nih.gov/19648217/) that uses maximum likelihood.
+To compile the results we use the script `script-admixture.R` on our 4 species.
+We show that only *Serranus cabrilla* shows evidence of north/south population structure (samples are ordered by latitude).
+
+<img align="center" height="240" src="admixture.png"></img>
 
 # 3. Isolation-by-distance at large scale
 
@@ -39,16 +44,17 @@ We calculate two different relatedness coefficients:
 
 The Loiselle coefficient calculate the relative probability of identity by descent of the alleles within the two compared individuals. 
 This index uses the allele frequencies within the whole dataset, making the distances between pairs of individuals dependent on all other individuals in the dataset.
-Loiselle coefficient is available in both GENODIVE and [GENEPOP](https://kimura.univ-montp2.fr/~rousset/Genepop4.7.pdf) (note that this coefficient is names ê Rousset in genepop)
+Loiselle coefficient is available in both [GENODIVE](https://www.bentleydrummer.nl/software/software/GenoDive.html) and [GENEPOP](https://kimura.univ-montp2.fr/~rousset/Genepop4.7.pdf) 
+(Note that this coefficient is names ê Rousset in genepop).
 Loiselle coefficient is the only estimator that uses a correction for small sample sizes.
 A [recent study](https://www.nature.com/articles/hdy201752) shows that this coefficient is the most accurate coefficient regarding different sample sizes.
 
-The relatedness coefficient of [Yang et al](https://www.nature.com/articles/ng.608) was estimated with the `--relatedness` function available in [VCFTOOLS](http://vcftools.sourceforge.net). 
+The relatedness coefficient of [Yang et al](https://www.nature.com/articles/ng.608) is calculated with the `--relatedness` function available in [VCFTOOLS](http://vcftools.sourceforge.net). 
 This coefficient is particularly appropriate for large cohorts. 
 
 ## Classic Mantel test
 
-Then we test the significance of the relationship between in-water distances and relatedness index with the `ecodist` package.
+We test the significance of the relationship between in-water distances and relatedness index with the `ecodist` package.
 Mantel’s r, one-tailed p-values (null-hypothesis r ≤ 0) is estimated with 10,000 permutations.
 Overall, we find no evidence of isolation by distance across the four studied species (see below).
 
