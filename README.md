@@ -27,7 +27,7 @@ We investigate population structure using the admixed model of [ADMIXTURE](https
 To compile the results we use the script `script-admixture.R` on our 4 species.
 We show that only *Serranus cabrilla* shows evidence of north/south population structure (samples are ordered by latitude).
 
-<img align="center" height="240" src="admixture.png"></img>
+<img align="center" height="240" src="02-population_structure/admixture.png"></img>
 
 # 3. Isolation-by-distance at large scale
 
