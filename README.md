@@ -18,8 +18,4 @@ The paper is currently submitted as part of the project [Reservebenfit](https://
 Sampling scheme is individual-based, as opposed to the population-level analyses that are typically conducted at large spatial scales.
 We adopt this individual‐based sampling scheme to efficiency detect isolation‐by‐distance as indicated by a *in silico* analysis.
 
-<<<<<<< HEAD
 ![Individual sampling scheme of reserevbenefit](01-sampling/sampling.png)
-=======
-![Individual sampling scheme of reserevbenefit](01-sampling/sampling.png)
->>>>>>> e6934501d1d2f837f360d129ad49406add9ff059
