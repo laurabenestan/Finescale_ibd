@@ -45,9 +45,9 @@ We calculate two different relatedness coefficients:
 The Loiselle coefficient calculate the relative probability of identity by descent of the alleles within the two compared individuals. 
 This index uses the allele frequencies within the whole dataset, making the distances between pairs of individuals dependent on all other individuals in the dataset.
 Loiselle coefficient is available in both [GENODIVE](https://www.bentleydrummer.nl/software/software/GenoDive.html) and [GENEPOP](https://kimura.univ-montp2.fr/~rousset/Genepop4.7.pdf) 
-(Note that this coefficient is names ê Rousset in genepop).
+(Note that this coefficient is also named ê Rousset).
 Loiselle coefficient is the only estimator that uses a correction for small sample sizes.
-A [recent study](https://www.nature.com/articles/hdy201752) shows that this coefficient is the most accurate coefficient regarding different sample sizes.
+A [recent study](https://www.nature.com/articles/hdy201752) demonstrates that this coefficient is robust to different sample sizes.
 
 The relatedness coefficient of [Yang et al](https://www.nature.com/articles/ng.608) is calculated with the `--relatedness` function available in [VCFTOOLS](http://vcftools.sourceforge.net). 
 This coefficient is particularly appropriate for large cohorts. 
