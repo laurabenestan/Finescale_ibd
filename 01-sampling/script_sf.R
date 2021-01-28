@@ -32,7 +32,7 @@ class(world)
 europe <- subset(world, continent == "Europe"| continent == "Africa")
 
 # Import geographic coordinates file
-data<-read.table("geographic_coordinates_1299ind_all.txt",header=TRUE, dec=".",sep="\t",na.strings="NA",strip.white=T)
+data<-read.table("../00-data/geographic_coordinates_1299ind_all.txt",header=TRUE, dec=".",sep="\t",na.strings="NA",strip.white=T)
 summary(data) 
 
 # Add species information
@@ -50,61 +50,6 @@ diplodus <- subset(sites_number, sites_number$SPECIES=="Diplodus sargus")
 mullus <- subset(sites_number, sites_number$SPECIES=="Mullus surmuletus")
 serranus <- subset(sites_number, sites_number$SPECIES=="Serranus cabrilla")
 palinurus <- subset(sites_number, sites_number$SPECIES=="Palinurus elephas")
-
-# Create a world map and save it in png
-png("Europe_map.png")
-map_world <- ggplot(data = europe) +
-  geom_sf() +
-  xlab(" ") + ylab(" ")+
-  theme_bw()+theme(legend.position = "none",
-                   panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
-  coord_fixed(xlim = c(-6, 35), ylim = c(30, 70), expand = FALSE, ratio = 1.3)+
-  geom_rect(xmin = -1, xmax = 10, ymin = 35, ymax = 44, 
-            fill = NA, colour = "black", size = 0.5)
-map_world
-dev.off()
-
-### Globe map
-png("Globe.png")
-globe_world <-ggplot(data = world) +
-  geom_sf() +
-  coord_sf(crs = "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs ")+
-  theme_bw()+
-  theme(legend.position = "none",
-         panel.grid.minor = element_blank())
-
-globe_world 
-dev.off()
-
-### Import the image
-img0 <- magick::image_transparent(
-  magick::image_read("World_map.png"),
-  color = "white"
-)
-
-# Create a map for Mediteranean Sea with marine reserves
-pdf("Map_med.pdf", width=7, height = 7)
-map_all <- ggplot(data = world) +
-  geom_sf() +
-  xlab("Longitude") + ylab("Latitude") +
-  coord_sf(xlim = c(-6, 8), ylim = c(35, 45), expand = FALSE)+
-  theme_bw()+theme(legend.position = "none",
-                   panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
-geom_polygon(aes(x=long, y=lat, group=group, fill=group), fill="blue", size=.2,color="blue", data=MPA_notake, alpha=0.5)+
-annotation_scale(location = "br", width_hint = 0.5)+
-geom_text(aes(x=Longitude+1.5, y=Latitude, label=NAME), data=mpa_info_text[-5,], colour="blue", size=2)
-map_all
-dev.off()
-
-### Merge the global map with the mediteranean one
-pdf("Top_panel.pdf", width=10, height=7)
-plot_grid(map_world, map_all, nrow = 1, rel_widths = c(1.5, 2.5))
-dev.off()
-
-### Add the world map on the right corner
-map_med <- ggdraw(map_all) + draw_image(img0, x = 0.35, y = 1.15, hjust = 1, vjust = 1, width = 0.20, height = 0.5)
-map_med
-dev.off()
 
 # Create a ggmap for each species
 x_title="Longitude"
