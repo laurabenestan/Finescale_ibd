@@ -74,6 +74,8 @@ To do so, we implemeted a function called `Function_slope_SES`in R to perform th
 SES are calculated for each spatial interval using the observed slope values and the mean and standard deviation of the null distributions: SES = (observed – mean(null))/SD(null). 
 SES values serve as a measure of departure from a pure null expectation. 
 
-
 Departures from 0 indicate non-randomness: values greater than 1.96 or smaller than 1.96 mean that the is slope significantly greater or lower than expected at the α = 0.05 level.
+We represent the results of SES and values of the slope using the script `figure_ses.R`.
+
+![Fine-scale isolation by distance](finescale.png)
 
