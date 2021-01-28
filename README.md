@@ -76,4 +76,4 @@ SES values serve as a measure of departure from a pure null expectation.
 
 
 Departures from 0 indicate non-randomness: values greater than 1.96 or smaller than 1.96 mean that the is slope significantly greater or lower than expected at the α = 0.05 level.
-# 5. 
+
