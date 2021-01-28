@@ -31,7 +31,7 @@ lapply(data_names,load,.GlobalEnv)
 slope<-list(Slope_diplo_kinship,Slope_mullus_kinship,
             Slope_lobster_kinship,Slope_serranus_kinship_nord)
 
-data_pic<-list.files(pattern="*.png",recursive = FALSE)
+data_pic<-list.files(pattern="../00-data/*.png",recursive = FALSE)
 pic<-lapply(data_pic,readPNG)
 names(pic) <- species_names
 #'  -------------------------------------------------------------------------   @formatdata
