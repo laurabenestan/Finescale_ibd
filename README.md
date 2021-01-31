@@ -81,6 +81,6 @@ We represent the results of SES and values of the slope using the script `figure
 
 # 5. Long distance dispersal
 
-<img align="center" height="400" src="05-long_distance/long_distance.png"></img>
+<img align="center" height="300" src="05-long_distance/long_distance.png"></img>
 
 
