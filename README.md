@@ -83,4 +83,8 @@ We represent the results of SES and values of the slope using the script `figure
 
 <img align="center" height="300" src="05-long_distance/long_distance.png"></img>
 
+In genetics, full‐sibs each inherit alleles from two shared parents, whereas half‐sibs inherit alleles that include only one shared parent. 
+Less information per genetic marker is then used for half‐sib reconstruction, that results in an identification of half‐sib relationships more problematic and less accurate, see [Ackerman et al. 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5253425/#eva12433-bib-0040). 
+Half‐sib reconstruction is less accurate with a weaker genetic structure.
+We need further research that aims to evaluate how the number of SNPs and the degree of relatedness jointly influences the accuracy of half-sib reconstruction. 
 
