@@ -36,11 +36,11 @@ min <- nrow(subset(geo_gen, geo_gen$DIST <5))
 Slope_SES <- Slope.boot.SES(geo_gen, window = c(seq(5,920,by=5)),min = min,repnull = 100,repboot = 100,core = 4)
 
 ### Save the results in a dataframe
-Slope_SES_results <- data.frame(aaply(laply(Slope_pinksy, as.matrix), c(2, 3), mean),aaply(laply(Slope_pinksy, as.matrix), c(2, 3), sd)[,c(2,4)])
+Slope_SES_results <- data.frame(aaply(laply(Slope_SES, as.matrix), c(2, 3), mean),aaply(laply(Slope_SES, as.matrix), c(2, 3), sd)[,c(2,4)])
 colnames(Slope_SES_results)[c(5,6)]<- c("slope_sd","SES_sd")
 
 ### Save the results in a file
-write.table(Slope_pinksy_final_results, "results_ses.txt", quote=FALSE, row.names=FALSE)
+write.table(Slope_pinksy_final_results, "results_ses_no_family_serranus.txt", quote=FALSE, row.names=FALSE)
 
 ### Save the results in a Rdata
-save.image("SES.Rdata")
+save.image("SES_no_family_serranus.Rdata")
