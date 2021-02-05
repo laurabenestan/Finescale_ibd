@@ -1,6 +1,8 @@
 # finescale_ibd
 Code for the paper "Restricted dispersal in a sea of gene flow"
 
+![Finescale IBD framework](Framework_IBD.png)
+
 # Table of contents
 
 0. [Introduction](#0-introduction)
