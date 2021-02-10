@@ -90,11 +90,11 @@ Less information per genetic marker is then used for half‐sib reconstruction, 
 Half‐sib reconstruction is less accurate with a weaker genetic structure.
 We need further research that aims to evaluate how the number of SNPs and the degree of relatedness jointly influences the accuracy of half-sib reconstruction. 
 
-	Ajk	|wang	|lynchli	|lynchrd	|ritland	|quellergt
-|--------|--------------------------------------------------|-------------|
-|Ajk	|1.0000000	|0.7936607	|0.7829032	|0.9041044	|0.9104210	|0.7933443
-|wang	|0.7936607	|1.0000000	|0.9965127	|0.7303800	|0.7305463	|0.6484581
-|lynchli	|0.7829032	|0.9965127	|1.0000000	|0.7294670	|0.7287947	|0.6800058
-|lynchrd	|0.9041044	|0.7303800	|0.7294670	|1.0000000	|0.9980201	|0.7362258
-|ritland	|0.9104210	|0.7305463	|0.7287947	|0.9980201	|1.0000000	|0.7403923
-|quellergt	|0.7933443	|0.6484581	|0.6800058	|0.7362258	|0.7403923	|1.0000000
+|	Ajk	|wang	|lynchli	|lynchrd	|ritland	|quellergt|
+|--------|--------|--------|--------|--------|--------|
+|Ajk	|1.0000000	|0.7936607	|0.7829032	|0.9041044	|0.9104210	|0.7933443|
+|wang	|0.7936607	|1.0000000	|0.9965127	|0.7303800	|0.7305463	|0.6484581|
+|lynchli	|0.7829032	|0.9965127	|1.0000000	|0.7294670	|0.7287947	|0.6800058|
+|lynchrd	|0.9041044	|0.7303800	|0.7294670	|1.0000000	|0.9980201	|0.7362258|
+|ritland	|0.9104210	|0.7305463	|0.7287947	|0.9980201	|1.0000000	|0.7403923|
+|quellergt	|0.7933443	|0.6484581	|0.6800058	|0.7362258	|0.7403923	|1.0000000|
